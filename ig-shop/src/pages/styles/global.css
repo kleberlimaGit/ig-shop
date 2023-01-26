@@ -11,3 +11,8 @@
 .calculate-width{
     max-width: calc(100vw - ((100vw - theme(width.296))/2));
 }
+
+.footer-a:hover footer{
+    transform: translateY(0);
+    opacity: 1;
+}

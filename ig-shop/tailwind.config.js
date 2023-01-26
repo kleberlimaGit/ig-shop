@@ -5,10 +5,12 @@ module.exports = {
     extend: {
       width: {
         128: "32rem",
+        164: "41rem",
         296: "74rem"
       },
       height:{
         128: "32rem",
+        164: "41rem",
         296: "74rem"
       },
       fontFamily:{
@@ -30,6 +32,9 @@ module.exports = {
         400:'#d4af37'
       }
     },
+    translate: {
+      '110': '110%',
+    }
     },
   },
   plugins: [],
