@@ -66,7 +66,7 @@ const [isCreatingCheckouSession, setIsCreatingCheckoutSession] = useState(false)
         </span>
         <p className="mt-9 text-xl text-grayR-300">{product.description}</p>
         <button disabled={isCreatingCheckouSession}
-          className={`mt-auto bg-greenR-500 text-white rounded-lg p-5 hover:bg-greenR-300 ${isCreatingCheckouSession ? 'cursor-not-allowed' : ''}`}
+          className={`mt-auto bg-greenR-500 text-white rounded-lg p-5 hover:bg-greenR-300 ${isCreatingCheckouSession ? 'cursor-not-allowed opacity-70' : ''}`}
           onClick={handlerCheckout}
         >
           Comprar agora
