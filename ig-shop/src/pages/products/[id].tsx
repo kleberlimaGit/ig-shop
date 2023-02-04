@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Stripe from "stripe";
 import axios from "axios";
 import { useState } from "react";
+import Head from "next/head";
 
 interface ProductProps {
   product: {
@@ -51,6 +52,11 @@ const [isCreatingCheckouSession, setIsCreatingCheckoutSession] = useState(false)
     );
   }
   return (
+    <>
+    <Head>
+      <title>{product.name} | Ignite Shop</title>
+    </Head>
+    
     <main className="grid grid-cols-2 gap-16 max:w-296 mx-auto my-12">
       <Image
         src={product.imageUrl}
@@ -73,6 +79,7 @@ const [isCreatingCheckouSession, setIsCreatingCheckoutSession] = useState(false)
         </button>
       </div>
     </main>
+    </>
   );
 }
 export const getStaticPaths: GetStaticPaths = async () => {

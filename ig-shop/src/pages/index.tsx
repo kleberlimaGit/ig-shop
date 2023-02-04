@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { GetStaticProps } from "next";
+import Head from "next/head";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { stripe } from "../lib/stripe";
-import { GetStaticProps } from "next";
 import Link from 'next/link'
 import Stripe from "stripe";
 import { formatterPrice } from "../utils/utils";
@@ -24,6 +25,10 @@ export default function Home({ products }: HomeProps) {
     },
   });
   return (
+    <>
+    <Head>
+      <title>Ignite Shop</title>
+    </Head>
     <main
       className="flex calculate-width w-full ml-auto min:h-164 keen-slider"
       ref={sliderRef}
@@ -53,6 +58,7 @@ export default function Home({ products }: HomeProps) {
         );
       })}
     </main>
+    </>
   );
 }
 
